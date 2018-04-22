@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: myApp-dev
+  profiles:
+    active: dev
+  cloud:
+    config:
+      url: http://localhost:8868/ #配置中心地址
+      profile: dev
+      name: applicatoin
+#      label: master #分支名称
+#      profile: dev #环境类型
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9999/eureka
+
+
+myProp:
+  str: str_1
+  arrInts: 5,5,6,7 #逗号表示数组
+  listP: #list 中存放map
+    - key1: 撒   #‘-’ 表示list中的一个map
+      key2: v2
+      key3: v20
+    - key4: soi
+      key6: 3
+  listP2:
+    - abc
+    - kbg
+  mapP:
+    - key1: abc
+      key2: sfa
+    - key2: 546
+
+
+server:
+  port: 8898

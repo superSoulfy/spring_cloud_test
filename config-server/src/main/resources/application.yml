@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native #指定应用为本地应用，配合使用本地配置文件
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:Q:\IdeaProject\spring_boot_test\config-server\src\main\resources\configfile #使用本地文件
+
+server:
+  port: 8868
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9999/eureka

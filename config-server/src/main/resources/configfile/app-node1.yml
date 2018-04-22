@@ -1,0 +1,7 @@
+content: hellow world!! this is spring config center1!!!
+spring:
+  application:
+    name: app
+
+server:
+  port: 8898

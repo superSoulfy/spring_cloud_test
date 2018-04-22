@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: gateway
+
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config-server #结合eureka使用高可用配置中心的service-id来访问配置中心
+
+#      uri: http://localhost:8868/ #配置中心地址（当使用单个配置中心的时候）
+
+server:
+  port: 8018
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9999/eureka
+
+#关于eureka配置位置的说明，如果使用高可用集群的配置中心时，微服务的eureka要先配置在bootstrap.yml中，否则无法使用spring.cloud.config.discovery.service-id去访问配置中心

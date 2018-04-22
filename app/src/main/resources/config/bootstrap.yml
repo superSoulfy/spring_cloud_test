@@ -1,0 +1,8 @@
+#若打开配置中心此文件先被读取
+spring:
+  application:
+    name: app
+  cloud:
+    config:
+     uri: http://localhost:8868/ #配置中心地址
+
