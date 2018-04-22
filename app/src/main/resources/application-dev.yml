@@ -19,7 +19,7 @@ eureka:
 
 myProp:
   str: str_1
-  arrInts: 5,5,6,7 #逗号表示数组
+  arrInts: 5,5,6,7 ,9 #逗号表示数组
   listP: #list 中存放map
     - key1: 撒   #‘-’ 表示list中的一个map
       key2: v2
